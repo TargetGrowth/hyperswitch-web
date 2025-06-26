@@ -730,6 +730,7 @@ let getWalletBrandIcon = (customerMethod: PaymentType.customerMethods) => {
   | Some("google_pay") => "google_pay_saved"
   | Some("samsung_pay") => "samsung_pay_saved"
   | Some("paypal") => "paypal"
+  | Some("iugu") => "iugu"
   | _ => "default-card"
   }
 
