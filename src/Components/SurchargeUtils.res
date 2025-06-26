@@ -8,6 +8,7 @@ let oneClickWallets = [
   {paymentMethodType: "paypal", displayName: "Paypal"},
   {paymentMethodType: "google_pay", displayName: "GooglePay"},
   {paymentMethodType: "klarna", displayName: "Klarna"},
+  {paymentMethodType: "iugu", displayName: "Iugu"},
 ]
 
 type walletSurchargeDetails = {
@@ -28,6 +29,7 @@ let useSurchargeDetailsForOneClickWallets = (~paymentMethodListValue) => {
       | "paypal" => (areOneClickWalletsRendered.isPaypal, "wallet")
       | "google_pay" => (areOneClickWalletsRendered.isGooglePay, "wallet")
       | "klarna" => (areOneClickWalletsRendered.isKlarna, "pay_later")
+      | "iugu" => (areOneClickWalletsRendered.isIugu, "wallet")
       | _ => (false, "")
       }
       if isWalletBtnRendered {
